@@ -2,9 +2,8 @@ version: '2'
 
 services:
     php:
-        tty: true
-        image: docker.io/bitnami/laravel:8
+        build: .
         ports:
             - "3000:3000"
         volumes:
-            - ./:/app
+            - ./:/var/www
